@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_SortArrOfStrings", "03_SortArrOfStrings\03_SortArrOfStrings.csproj", "{6B72B128-9AEA-4F30-92F3-C7406F3AE783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comperison", "comperison\comperison.csproj", "{162C778D-8764-4999-88D9-EEF53045B7EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B72B128-9AEA-4F30-92F3-C7406F3AE783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B72B128-9AEA-4F30-92F3-C7406F3AE783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B72B128-9AEA-4F30-92F3-C7406F3AE783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B72B128-9AEA-4F30-92F3-C7406F3AE783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162C778D-8764-4999-88D9-EEF53045B7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162C778D-8764-4999-88D9-EEF53045B7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162C778D-8764-4999-88D9-EEF53045B7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162C778D-8764-4999-88D9-EEF53045B7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
