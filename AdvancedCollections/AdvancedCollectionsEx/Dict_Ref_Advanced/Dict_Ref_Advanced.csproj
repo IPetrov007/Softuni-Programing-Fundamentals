@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2672052-1FCC-4F37-B6D3-7529F91B3943}</ProjectGuid>
+    <ProjectGuid>{A25E76E3-4256-4150-8CD8-6D7A739D3187}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02_Cities</RootNamespace>
-    <AssemblyName>02_Cities</AssemblyName>
+    <RootNamespace>Dict_Ref_Advanced</RootNamespace>
+    <AssemblyName>Dict_Ref_Advanced</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CitiesByContinentAndCounry.cs" />
+    <None Include="Dict_Ref_advanced" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dict_Ref_Advanced
+{
+    class Program
+    {
+        static void Main()
+        {
+		Dictionary<strings, List<int>> dictionary = new Dictionary<strings, List<int>>();
+
+		string inputLine = Console.ReadLine();
+		while(inputLine != "end")
+		{
+		string inputParams = inputLine.Split(new[] {' ', '-', '>',',' StringSplitOptions.RemoveEmptyEntries});
+
+		string currentKey = inputParams = 0;
+		int firstValue = -1;
+
+		if(int.TryParse(inputParams[1], out firstValue))
+		{
+			if(!dictionary.ContainsKey(currentKey))
+			{
+				dictionary[currentKey] = new List<int>();
+			}
+			for(int i = 1; i < input<lenght; i++)
+			{
+				dictionary[currentKey].Add(int.Parse(inputParams[i]));
+			}
+		}else
+		{
+			string otherKeys = inputParams[1];
+			if (dictionary.ContainsKey(otherKey))
+			{
+				dictionary[currentKey] = new List<int>(dictionary[otherKey]);
+			}
+		}
+
+		inputLIne = Console.ReadLine();
+		}
+
+		foreach (var entry in dictionary)
+		{
+		Console.WriteLine("{0} === {1}", entry.Key, string.Join(", ", entry.Value));
+		}
+		}
+    }
+}

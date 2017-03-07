@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ForumTopics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var result = new Dictionary<string, HashSet<string>>();
+            var inputStr = Console.ReadLine();
+            while (!inputStr.Equals("filter"))
+            {
+                var input = inputStr.Split(new[] { '-', '>', ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (!result.ContainsKey(input[0]))
+                {
+                    result[input[0]] = new HashSet<string>();
+                }
+                for (int i = 1; i < input.Length; i++)
+                {
+                    result[input[0]].Add(input[i]);
+                }
+                inputStr = Console.ReadLine();
+            }
+            var tags = Console.ReadLine().Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            bool isContain = true;
+
+            foreach (var kvp in result.Keys)
+            {
+                for (int k = 0; k < tags.Length; k++)
+                {
+                    if (!result[kvp].Contains(tags[k]))
+                    {
+                        isContain = false;
+                    }
+                }
+                if (isContain)
+                {
+                    Console.WriteLine($"{kvp} | #{string.Join(", #", result[kvp])}");
+                }
+            }
+
+        }
+    }
+}

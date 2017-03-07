@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SocialMedia
+{
+    class SocialMedia
+    {
+        static void Main(string[] args)
+        {
+            var resultLike = new Dictionary<string, int>();
+            var resultDislike = new Dictionary<string, int>();
+            var resultComment = new Dictionary<string, Dictionary<string, string>>();
+            string inputStr = Console.ReadLine();
+            while (!inputStr.Equals("drop the media"))
+            {
+                var input = inputStr.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (input[0].Equals("post"))
+                {
+                    if (!resultLike.ContainsKey(input[1]))
+                    {
+                        resultLike[input[1]] = 0;
+                        resultDislike[input[1]] = 0;
+                        resultComment[input[1]] = new Dictionary<string, string>();
+                    }
+                }
+                else if (input[0].Equals("like"))
+                {
+                    resultLike[input[1]]++;
+                }
+                else if (input[0].Equals("dislike"))
+                {
+                    resultDislike[input[1]]++;
+                }
+                else if (input[0].Equals("comment"))
+                {
+                    resultComment[input[1]].Add(input[2], input[3]);
+                }
+                inputStr = Console.ReadLine();
+            }
+            foreach (var kvp in resultLike.Keys)
+            {
+                Console.Write("Post: {0} ", kvp);
+                Console.Write("| Likes: {0} ", resultLike[kvp]);
+                Console.WriteLine("| Dislikes: {0}", resultDislike[kvp]);
+                Console.WriteLine("Comments:");
+                if (resultComment[kvp].Count == 0)
+                {
+                    Console.WriteLine("None");
+                }
+                else
+                {
+                    foreach (var dict in resultComment[kvp])
+                    {
+                        //var autor = resultComment[kvp].Keys;
+                        //var comment = resultComment[kvp].Values;
+                        Console.WriteLine($"*  {dict.Key}: {dict.Value}");
+                        //string.Join(" ", resultComment[comment].Keys), 
+                        //string.Join(" ", resultComment[comment].Values));
+                    }
+                }
+             }
+
+        }
+    }
+}
