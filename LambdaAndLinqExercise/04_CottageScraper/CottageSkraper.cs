@@ -51,8 +51,8 @@ namespace _04_CottageScraper
             var cottageScraperSubtotal = unusedLogPrice + usedLogPrice;
 
             Console.WriteLine($"Price per meter: ${pricePerMeter:F2}");
-            Console.WriteLine($"Used log price: ${usedLogPrice:F2}");
-            Console.WriteLine($"Unused log price: ${unusedLogPrice:F2}");
+            Console.WriteLine($"Used logs price: ${usedLogPrice:F2}");
+            Console.WriteLine($"Unused logs price: ${unusedLogPrice:F2}");
             Console.WriteLine($"CottageScraper subtotal: ${cottageScraperSubtotal:F2}");
         }
 
