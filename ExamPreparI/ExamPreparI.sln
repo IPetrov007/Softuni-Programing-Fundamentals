@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_SinoTheWalLker", "01_Sin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_SoftuniKaraoke", "02_SoftuniKaraoke\02_SoftuniKaraoke.csproj", "{C803915B-7A75-482E-84F5-C18FF329ED17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Niki", "Niki\Niki.csproj", "{90788E14-95C0-4000-9A83-C92E72AF2FF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C803915B-7A75-482E-84F5-C18FF329ED17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C803915B-7A75-482E-84F5-C18FF329ED17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C803915B-7A75-482E-84F5-C18FF329ED17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90788E14-95C0-4000-9A83-C92E72AF2FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90788E14-95C0-4000-9A83-C92E72AF2FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90788E14-95C0-4000-9A83-C92E72AF2FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90788E14-95C0-4000-9A83-C92E72AF2FF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
