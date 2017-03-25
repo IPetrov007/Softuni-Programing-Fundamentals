@@ -82,18 +82,28 @@ namespace _06_Messages
                 .Where(x => x.Sender.Username == second)
                 .Count();
 
-            for (int i = 0; i < Math.Max(messagesFromFirstToSecond, messagesFromSecondToFirst); i++)
+            if (messagesFromFirstToSecond == 0 && messagesFromSecondToFirst == 0)
             {
-                if (i < messagesFromFirstToSecond)
+                Console.WriteLine("No messages");
+
+            }
+            else
+            {
+                for (int i = 0; i < Math.Max(messagesFromFirstToSecond, messagesFromSecondToFirst); i++)
                 {
-                    Console.WriteLine($"{first}: {users.Where(x => x.Username == second).SelectMany(x => x.ReceivedMessages).Where(x => x.Sender.Username == first).Select(x => x.Content).ToList()[i]}");
-                }
-                if (i < messagesFromSecondToFirst)
-                {
-                    Console.WriteLine($"{users.Where(x => x.Username == first).SelectMany(x => x.ReceivedMessages).Where(x => x.Sender.Username == second).Select(x => x.Content).ToList()[i]} :{second}");
+
+
+                    if (i < messagesFromFirstToSecond)
+                    {
+                        Console.WriteLine($"{first}: {users.Where(x => x.Username == second).SelectMany(x => x.ReceivedMessages).Where(x => x.Sender.Username == first).Select(x => x.Content).ToList()[i]}");
+                    }
+                    if (i < messagesFromSecondToFirst)
+                    {
+                        Console.WriteLine($"{users.Where(x => x.Username == first).SelectMany(x => x.ReceivedMessages).Where(x => x.Sender.Username == second).Select(x => x.Content).ToList()[i]} :{second}");
+                    }
+
                 }
             }
         }
     }
 }
-
