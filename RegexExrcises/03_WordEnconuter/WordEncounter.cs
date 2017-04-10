@@ -14,7 +14,7 @@ namespace _03_WordEnconuter
             var filter = Console.ReadLine().ToArray();
             var simbol = filter[0];
             var digit = int.Parse(filter[1].ToString());
-            var pattern = "";
+            var pattern = @"[A-Z].*[.!?]";
             Regex regex = new Regex(pattern);
             var result = new List<string>();
 
@@ -26,32 +26,28 @@ namespace _03_WordEnconuter
             
                 if (validSentence)
                 {
-                    var words = sentence.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
-                    foreach (var word in words)
+                    var patternWord = new Regex(@"\w+");
+
+                    var words = patternWord.Matches(sentence);
+                    foreach (Match word in words)
                     {
-                        var currentWord = word.Trim('.').Trim(',').Trim('!').Trim('?');
+                        var currentWord = word.Groups[0].Value;
                         var counter = 0;
-                        var index = -1;
-                        while (true)
+
+                        foreach (var character in currentWord)
                         {
-                            index = currentWord.ToLower().IndexOf(simbol, index + 1);
-                            if (index > -1)
+                            if (character == simbol)
                             {
                                 counter++;
                             }
-                            else
-                            {
-                                if (counter >= digit)
-                                {
-                                    result.Add(currentWord);
-                                }
-                                counter = 0;
-                                break;
-                            }
                         }
+                        if (counter >= digit)
+                        {
+                            result.Add(currentWord);
+                        }
+                        counter = 0;
                     }
                 } 
-
                 input = Console.ReadLine();
             }
             Console.WriteLine(string.Join(", ", result));

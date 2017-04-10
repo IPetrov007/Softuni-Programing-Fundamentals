@@ -9,8 +9,10 @@ namespace _01_Cards
         public static void Main()
         {
             var inputStr = Console.ReadLine();
-            //([1]?[0-9JKQA])[SHDC])
-            var patern = "([0-9]?[0-9JKQA])[SHDC]";
+            
+            //"(?<![0-9])(?:([2-9]|10)|(A|K|Q|J))+(S|H|D|C)" - matchva vsichko tochno. ne e nujen IF;
+
+            var patern = "([1]?[0-9JKQA])([SHDC])";
 
             Regex regex = new Regex(patern);
 
@@ -21,10 +23,8 @@ namespace _01_Cards
             foreach (Match match in matches)
             {
                 var power = 0;
-                
-                ??????????????
 
-                if (int.TryParse(match.ToString(), out power))
+                if (int.TryParse(match.Groups[1].ToString(), out power))
                 {
                     if (power < 2 || power > 10)
                     {

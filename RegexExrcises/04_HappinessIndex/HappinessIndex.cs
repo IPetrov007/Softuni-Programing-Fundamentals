@@ -24,7 +24,7 @@ namespace _04_HappinessIndex
             var picture = HappinessPicture(HappinessIndex);
 
             Console.WriteLine($"Happiness index: {HappinessIndex:F2} {picture}");
-            Console.WriteLine($"[Happy count: {happyCount}, Sad count:{sadCount}]");
+            Console.WriteLine($"[Happy count: {happyCount}, Sad count: {sadCount}]");
         }
 
         private static string HappinessPicture(double happinessIndex)
