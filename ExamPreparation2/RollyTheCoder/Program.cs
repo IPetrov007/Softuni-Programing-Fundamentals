@@ -95,7 +95,6 @@ namespace RollyTheCoder
             }
             var result = events
                 .OrderByDescending(p => p.Participants.Count)
-                //.ThenBy(n => n.Participants)
                 .ToList();
  
             foreach (var ev in result)
