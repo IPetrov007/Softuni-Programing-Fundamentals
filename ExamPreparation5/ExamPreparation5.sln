@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_HornetAssault", "03_Horn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_HornetArmada", "03_HornetArmada\03_HornetArmada.csproj", "{709C9B34-4A10-4CC1-AC45-02A9C6E5A510}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wormsRumi", "wormsRumi\wormsRumi.csproj", "{EE06AA9D-BEAE-4719-BE59-E9DF12E9BE23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{709C9B34-4A10-4CC1-AC45-02A9C6E5A510}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709C9B34-4A10-4CC1-AC45-02A9C6E5A510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709C9B34-4A10-4CC1-AC45-02A9C6E5A510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE06AA9D-BEAE-4719-BE59-E9DF12E9BE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE06AA9D-BEAE-4719-BE59-E9DF12E9BE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE06AA9D-BEAE-4719-BE59-E9DF12E9BE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE06AA9D-BEAE-4719-BE59-E9DF12E9BE23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
