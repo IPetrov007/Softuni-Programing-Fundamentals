@@ -36,9 +36,7 @@ namespace _02_CitiesByCountryAndContinent
 
                 foreach (var kvp in citiesData[nameContinent].Keys)
                 {
-
                     Console.WriteLine($" {kvp} -> {string.Join(", ", citiesData[nameContinent][kvp])}");
-
                 }
             }
         }
