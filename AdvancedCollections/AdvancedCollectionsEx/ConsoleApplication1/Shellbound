@@ -20,14 +20,11 @@ namespace Shellbound
             foreach (var region in result.Keys)
             {
                 Console.Write("{0} -> ", region);
-
                 var sum = result[region].Sum();
                 var count = result[region].Count;
                 Console.WriteLine("{0} ({1})", string.Join(", ", result[region]), (sum - sum/count));
             }
         }
-		
-
         private static void AddRegionAndShell(Dictionary<string, HashSet<int>> result, string inputStr)
         {
             var input = inputStr.Split(' ');
